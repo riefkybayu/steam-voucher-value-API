@@ -17,10 +17,12 @@ Usage
 
 
 
-GET /api/harga/:nilai
+GET /api/harga/:nilai  
+
 Thats what you will request from the server, nilai has to be number.
 What it does with nilai is that, it will find the best value close to nilai, and calculated the best price per value.
 It will send back a respone in JSON, in this format :
+
 {
   "idr" : [
     //value here as object{harga, nilai, value, link}
