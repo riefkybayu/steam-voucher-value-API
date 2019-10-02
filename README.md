@@ -1,6 +1,6 @@
 # steam-voucher-value-API
 
-##How it works?
+## How it works?
 The price of steam voucher was scrapped with puppeteer from itemku ecommerce. And value was calculated based on daily exchange rates of USD-IDR, the rates itself was obtained with request-promise from exchange public API. 
 
 
