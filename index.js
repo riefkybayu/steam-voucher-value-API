@@ -19,28 +19,28 @@ var total =  [
     "usd_5", "usd_10", "usd_20", "usd_30", "usd_50", "usd_60", "usd_100",
     "idr_12000", "idr_45000", "idr_60000", "idr_90000", "idr_120000", "idr_250000", "idr_400000", "idr_600000",
 ];
-
-let daily_check = async () => {
-    try{
-        fs.readFile("./data_ver/data_scrap.txt", "utf8", function(err, content){
-            tanggal_update_scrap = content;
-            if((tanggal_update_scrap==undefined)||(tanggal_update_scrap!==today_str)){
-                tanggal_update_scrap = today_str;
-                fs.writeFile("./data_ver/data_scrap.txt", tanggal_update_scrap, function(err){
-                    if(err){
-                      console.log(err);
-                    }
-                });
-                var harga = require("./get_harga");
-                var currency = require("./get_currency");
-                var generator = require("./json_creator");
-            }
-        })
-    }
-    catch(err){
-        console.log(err)
-    }
-}
+//daily_check();
+// let daily_check = async () => {
+//     try{
+//         fs.readFile("./data_ver/data_scrap.txt", "utf8", function(err, content){
+//             tanggal_update_scrap = content;
+//             if((tanggal_update_scrap==undefined)||(tanggal_update_scrap!==today_str)){
+//                 tanggal_update_scrap = today_str;
+//                 fs.writeFile("./data_ver/data_scrap.txt", tanggal_update_scrap, function(err){
+//                     if(err){
+//                       console.log(err);
+//                     }
+//                 });
+//                 var harga = require("./get_harga");
+//                 var currency = require("./get_currency");
+//                 var generator = require("./json_creator");
+//             }
+//         })
+//     }
+//     catch(err){
+//         console.log(err)
+//     }
+// }
 
 let get_product_idr = async (nilai) => {
     let best_idr = nilai_idr.filter((nilai) => nilai >= temp_data);
@@ -54,7 +54,7 @@ let get_product_usd = async (nilai) => {
     best_usd_index = nilai_usd.indexOf(best_usd);
     return best_usd;
 }
-daily_check();
+
 
 app.get('/api/rates', (req, res) => {
     let nilai_idr = (1/rates.USD)*rates.IDR;
