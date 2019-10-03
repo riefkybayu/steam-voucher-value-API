@@ -36,7 +36,7 @@ It will send back a respone in JSON, in this format :
 }
 
 ### GET /api/rates/
-Since exchangerates public API was EUR based, fetching this API will give USD based rates(1 USD = ... IDR).
+Since exchangerates public API was EUR based, fetching this API will give USD based rates(1 USD = ... IDR).  
 JSON Format :
 
 {
