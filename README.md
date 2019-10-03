@@ -26,20 +26,20 @@ Thats what you will request from the server, nilai has to be number.
 What it does with nilai is that, it will find the best value close to nilai, and calculated the best price per value.
 It will send back a respone in JSON, in this format :  
   
-{  
-  "idr" : [  
-    //value here as array of object{harga, nilai, value, link}  
-  ],  
-  "usd " [  
-    //value here as array of object{harga, nilai, value, link}  
-  ]  
-}  
+{
+  "idr" : [
+    //value here as array of object{harga, nilai, value, link}
+  ],
+  "usd " [
+    //value here as array of object{harga, nilai, value, link}
+  ]
+}
 
 ### GET /api/rates/
 Since exchangerates public API was EUR based, fetching this API will give USD based rates(1 USD = ... IDR).  
 JSON Format :
 
-{  
-  "IDR" : number,  
-  "USD" : number  
+{
+  "IDR" : number,
+  "USD" : number
 }
