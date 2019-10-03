@@ -12,8 +12,9 @@ The price of steam voucher was scrapped with puppeteer from itemku ecommerce. An
 ## Usage
 1. Run get_harga.js with "node get_harga" to get newest price with puppeteer, do it once a day.
 2. Run get_currency.js with "node get_currency" to get newest exchange rates, do it once a day.
-3. Run json_creator.js with "node json_creator" to make final json that will be used to as API, run only json creator if there is new update either in harga/curreny. usually only needed to run once a day.
+3. Run json_creator.js with "node json_creator" to make final json that will be used to as API, always run everytime harga/currency was updated. Usually only need to be run once a day after both harga and currency were run.
 4. Run index.js with "node index", this will make server listing to all request to port 3000, you can change it as well if you need.
+NOTE : You will want to use nodejs process manager such as PM2 for production.
 
 
 ### GET /api/harga/
