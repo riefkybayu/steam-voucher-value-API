@@ -28,10 +28,10 @@ It will send back a respone in JSON, in this format :
   
 {
   "idr" : [
-    //value here as array of object{harga, nilai, value, link}
+    //as array of object{harga, nilai, value, link}
   ],
   "usd " [
-    //value here as array of object{harga, nilai, value, link}
+    //as array of object{harga, nilai, value, link}
   ]
 }
 
