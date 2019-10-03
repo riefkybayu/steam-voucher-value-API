@@ -39,7 +39,7 @@ It will send back a respone in JSON, in this format :
 Since exchangerates public API was EUR based, fetching this API will give USD based rates(1 USD = ... IDR).  
 JSON Format :
 
-{
-  "IDR" : number,
-  "USD" : number
+{  
+  "IDR" : number,  
+  "USD" : number  
 }
