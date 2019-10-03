@@ -62,6 +62,7 @@ app.get('/api/rates', (req, res) => {
     nilai_idr = Number(nilai_idr);
     res.send(JSON.stringify({"IDR": nilai_idr, "USD":1}))
 });
+
 app.get('/api/harga',(req, res) => {
     res.send(final_pricing);
     
