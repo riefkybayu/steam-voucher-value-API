@@ -4,6 +4,7 @@
 #### CURRENCY
 ###### The currency is obtained from https://api.exchangeratesapi.io which is an EUR based exchange rates, however this api will convert it to USD base.
 
+#### Vouchers 
 ###### The price of vouchers is obtained by webscrapping itemku.com, currently this api will scrap USD vouchers and IDR voucher only.
 
 ## USAGE
