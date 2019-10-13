@@ -47,5 +47,5 @@ diskon : Boolean,
 nilai : Number  
 
 
-### CHANGES
-#### This script now use mongodb Atlas to store data instead of json files in the app, you can use your own database server if you want by changing url string in mongoose.connect in index.js, fetch_price.js, and fetch_currency.js. Also optimize puppeteer scrapping.
+## CHANGES
+### This script now use mongodb Atlas to store data instead of json files in the app, you can use your own database server if you want by changing url string in mongoose.connect in index.js, fetch_price.js, and fetch_currency.js. Also optimize puppeteer scrapping.
