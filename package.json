@@ -1,0 +1,23 @@
+{
+  "name": "steam-helper-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js",
+    "cur": "node ./script/fetch_currency.js",
+    "price": "node ./script/fetch_price.js"
+  },
+  "author": "bayu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.4",
+    "node-fetch": "^2.6.0",
+    "puppeteer": "^1.20.0"
+  }
+}
