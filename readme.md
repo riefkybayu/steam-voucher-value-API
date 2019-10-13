@@ -19,11 +19,11 @@
 ###### 3. run "npm start" to start listening for request of API
 
 ## API
-#### GET /api/currency/
-###### Will give you the rates for IDR and USD. this rates is USD based.
+### GET /api/currency/
+#### Will give you the rates for IDR and USD. this rates is USD based.
 
-#### GET /api/price/
-###### Will give you the price list, the format is going to be array of objects, and the object will be formatted in :
+### GET /api/price/
+#### Will give you the price list, the format is going to be array of objects, and the object will be formatted in :
 _id : object_ID  
 link : String,  
 produk : String,  
@@ -34,8 +34,8 @@ harga_asli : Number,
 diskon : Boolean,  
 nilai : Number  
 
-#### GET /api/price/:nilai
-##### Will give you the closest greater value than your input for both USD voucher and IDR voucher, the format is going array of 2 object. USD and IDR, the object will be formatted in :
+### GET /api/price/:nilai
+#### Will give you the closest greater value than your input for both USD voucher and IDR voucher, the format is going array of 2 object. USD and IDR, the object will be formatted in :
 _id : object_ID  
 link : String,  
 produk : String,  
@@ -47,5 +47,5 @@ diskon : Boolean,
 nilai : Number  
 
 
-## CHANGES
-###### This script now use mongodb Atlas to store data instead of json files in the app, you can use your own database server if you want by changing url string in mongoose.connect in index.js, fetch_price.js, and fetch_currency.js. Also optimize puppeteer scrapping.
+### CHANGES
+#### This script now use mongodb Atlas to store data instead of json files in the app, you can use your own database server if you want by changing url string in mongoose.connect in index.js, fetch_price.js, and fetch_currency.js. Also optimize puppeteer scrapping.
