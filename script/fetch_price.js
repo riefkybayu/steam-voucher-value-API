@@ -2,29 +2,12 @@ const puppeteer = require("puppeteer");
 const mongoose = require('mongoose');
 const price = require("./models/price");
 const currency = require("./models/currency");
+const url = require("./url/url").array;
+
 mongoose.connect('mongodb+srv://bayu:UCEK5Ts6LoiaFusU@riefkybayu-ox7jc.mongodb.net/steam-helper?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
-require('events').EventEmitter.defaultMaxListeners = 15;
-const url = [
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2863&group=3",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2864&group=3",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2867&group=3",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2868&group=3",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2869&group=3",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2870&group=3",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=3260&group=3",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2853&group=4",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2854&group=4",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2855&group=4",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2856&group=4",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2857&group=4",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2858&group=4",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2859&group=4",
-    "https://itemku.com/games/steam?page=1&game=43&type=39&sort_by=1&item=2860&group=4"
-];
-
 
 let get_harga = async(url_pass) => {
     const browser = await puppeteer.launch();
