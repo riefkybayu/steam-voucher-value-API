@@ -23,7 +23,7 @@ const update = async(idr, usd) => {
           await cur.updateOne({USD : usd}, {IDR : idr}).exec().then(res => console.log({"Update":res}));
       }else{
           const new_cur = new cur({
-              _id: new mongoose.Types.ObjectId(), 
+              //_id: new mongoose.Types.ObjectId(), 
               IDR : idr, 
               USD : usd,
           });

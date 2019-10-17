@@ -67,8 +67,16 @@ const init = async() => {
               temp_nilai_idr = Number(temp_nilai_idr);
             }
             temp_nilai = temp_nilai_idr/res.harga;
+            let temp_index = i;
+            if(i>=7){
+              temp_index = i-7;
+            }
             const new_price = new price({
-              _id :new mongoose.Types.ObjectId(),
+              //_id :new mongoose.Types.ObjectId(),
+              index : {
+                currency : res.currency,
+                index : temp_index
+              },
               link : res.link,
               produk : res.product,
               currency : res.currency,

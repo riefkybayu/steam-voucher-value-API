@@ -1,7 +1,11 @@
 const mongoose = require("mongoose");
 
 const priceSchema = mongoose.Schema({
-    _id : mongoose.Schema.Types.ObjectId,
+    //_id : mongoose.Schema.Types.ObjectId,
+    index : {
+        currency : String,
+        index : Number
+    },
     link : String,
     produk : String,
     currency : String,
